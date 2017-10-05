@@ -12,7 +12,7 @@ fileID = fopen('airports.dat','r');
 Airports = textscan(fileID,'%d%s%s%s%s%s%f%f%f%s%s%s%*[^\n]','Delimiter',{',"','","','",',','});
 fclose(fileID);
 
-DataA = table(int16(1),"","","","",double(0),double(0),int16(0),"PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),[0 0],datetime(0,0,0),false,int16(0),double(0),...
+DataA = table(int16(1),"","","","",double(0),double(0),int16(0),"PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),[0 0],[0 0],false,int16(0),double(0),...
     'VariableNames',{'Number','Airline','FlightID','IATA_O','City_O','Lat_O','Lon_O','Alt_O','IATA_D','City_D','Lat_D','Lon_D','Alt_D','ETA','ETD','Int','CPAX','Distance'});
 
 DataA.Properties.VariableUnits{'Distance'} = 'Nautical Miles';
@@ -23,7 +23,7 @@ DataA.Properties.VariableUnits{'Lon_D'} = 'Degrees (Decimal)';
 DataA.Properties.VariableUnits{'Alt_O'} = 'Feet';
 DataA.Properties.VariableUnits{'Alt_D'} = 'Feet';
 
-DataD = table(int16(1),"","","PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),"","",double(0),double(0),int16(0),datetime(0,0,0),datetime(0,0,0),false,int16(0),double(0),...
+DataD = table(int16(1),"","","PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),"","",double(0),double(0),int16(0),[0 0],[0 ],false,int16(0),double(0),...
     'VariableNames',{'Number','Airline','FlightID','IATA_O','City_O','Lat_O','Lon_O','Alt_O','IATA_D','City_D','Lat_D','Lon_D','Alt_D','ETA','ETD','Int','CPAX','Distance'});
 
 DataD.Properties.VariableUnits{'Distance'} = 'Nautical Miles';
@@ -106,8 +106,8 @@ end
 
 DataA.Distance(:) = deg2nm(distance(DataA.Lat_O(:),DataA.Lon_O(:),DataA.Lat_D(:), DataA.Lon_D(:)));
 
-datetime.setDefaultFormats('default','HH:mm:ss')
-Format = 'HH:mm:ss'; DataA.ETD(:) = datetime(2017,9,18,0,0,((hour(DataA.ETA(:))*60+minute(DataA.ETA(:))) - 60*DataA.Distance(:)/400)*60);
+% datetime.setDefaultFormats('default','HH:mm:ss')
+% Format = 'HH:mm:ss'; DataA.ETD(:) = datetime(2017,9,18,0,0,((hour(DataA.ETA(:))*60+minute(DataA.ETA(:))) - 60*DataA.Distance(:)/400)*60);
 % DataA.ETD(:) = datetime(DataA.ETD(:),'InputFormat','HH:mm:ss');
 
 
@@ -116,11 +116,11 @@ for i = 1:1:length(FileDepartures{1,1})
     DataD.Number(i,1) = i;
     DataD.Airline(i) = FileDepartures{1,1}{i,1};
     DataD.FlightID(i) = FileDepartures{1,2}(i);
-    ETD = string(FileArrivals{1,5}(i));
+    ETD = string(FileDepartures{1,5}(i));
     ETD = strsplit(ETD,' ');
     ETD = strsplit(ETD(1),':');
-    DataA.ETD(i,1) = ETD(1);
-    DataA.ETD(i,2) = ETD(2);
+    DataD.ETD(i,1) = ETD(1);
+    DataD.ETD(i,2) = ETD(2);
     DataD.IATA_O(i) = "PHX";
     DataD.City_O(i) = "PHOENIX";
     DataD.Lat_O(i) = double(33.43429946899414);
