@@ -116,6 +116,11 @@ for i = 1:1:length(FileDepartures{1,1})
     DataD.Number(i,1) = i;
     DataD.Airline(i) = FileDepartures{1,1}{i,1};
     DataD.FlightID(i) = FileDepartures{1,2}(i);
+    ETD = string(FileArrivals{1,5}(i));
+    ETD = strsplit(ETD,' ');
+    ETD = strsplit(ETD(1),':');
+    DataA.ETD(i,1) = ETD(1);
+    DataA.ETD(i,2) = ETD(2);
     DataD.IATA_O(i) = "PHX";
     DataD.City_O(i) = "PHOENIX";
     DataD.Lat_O(i) = double(33.43429946899414);
@@ -142,7 +147,7 @@ for i = 1:1:length(FileDepartures{1,1})
         end
     end
 end
-DataD.ETA = FileDepartures{1,5};
+% DataD.ETA = FileDepartures{1,5};
 
 for i=1:DataD.Number(end)
     if DataD.Int(i) == true
