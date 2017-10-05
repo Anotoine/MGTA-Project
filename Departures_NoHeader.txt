@@ -1,0 +1,526 @@
+American Airlines;1969;CHICAGO - O'HARE(ORD);7:00 AM
+Delta Air Lines;1668;MINN/ST.PAUL(MSP);7:00 AM
+Delta Air Lines;1747;ATLANTA(ATL);7:00 AM
+Southwest Airlines;1755;KANSAS CITY(MCI);7:00 AM
+Southwest Airlines;1755;DALLAS(DAL);7:00 AM
+Southwest Airlines;1755;LOS ANGELES(LAX);7:00 AM
+Southwest Airlines;1824;LOS ANGELES(LAX);7:00 AM
+Southwest Airlines;1972;BALTIMORE/WASHINGTON(BWI);7:00 AM
+Southwest Airlines;1972;ST. LOUIS(STL);7:00 AM
+Southwest Airlines;1972;CHICAGO - MIDWAY(MDW);7:00 AM
+United Airlines;656;CHICAGO - O'HARE(ORD);7:05 AM
+United Airlines;656;BUFFALO(BUF);7:05 AM
+Delta Air Lines;5775;SEATTLE(SEA);7:15 AM
+Southwest Airlines;1506;SALT LAKE CITY(SLC);7:15 AM
+Southwest Airlines;1082;LAS VEGAS(LAS);7:15 AM
+Southwest Airlines;1082;SAN FRANCISCO(SFO);7:15 AM
+United Airlines;1418;HOUSTON(IAH);7:18 AM
+United Airlines;1418;CALGARY(YYC);7:18 AM
+American Airlines;491;LOS ANGELES(LAX);7:20 AM
+American Airlines;1196;DALLAS-FT. WORTH(DFW);7:25 AM
+American Airlines;1856;PHILADELPHIA(PHL);7:25 AM
+Southwest Airlines;150;ORANGE COUNTY(SNA);7:25 AM
+American Airlines;1709;SAN JOSE(SJC);7:30 AM
+American Airlines;1709;DALLAS-FT. WORTH(DFW);7:30 AM
+Delta Air Lines;5743;SALT LAKE CITY(SLC);7:30 AM
+Hawaiian Airlines;35;HONOLULU(HNL);7:30 AM
+Southwest Airlines;25;DALLAS(DAL);7:30 AM
+Southwest Airlines;25;HOUSTON(HOU);7:30 AM
+Southwest Airlines;25;DENVER(DEN);7:30 AM
+Southwest Airlines;25;PORTLAND(PDX);7:30 AM
+Southwest Airlines;1866;DENVER(DEN);7:30 AM
+Southwest Airlines;1866;PITTSBURGH(PIT);7:30 AM
+Southwest Airlines;1866;ORLANDO(MCO);7:30 AM
+Southwest Airlines;1866;HOUSTON(HOU);7:30 AM
+American Airlines;465;SAN DIEGO(SAN);7:35 AM
+American Airlines;855;SAN FRANCISCO(SFO);7:35 AM
+American Airlines;855;PHILADELPHIA(PHL);7:35 AM
+American Airlines;5895;FRESNO(FAT);7:35 AM
+Southwest Airlines;1703;CHICAGO - MIDWAY(MDW);7:35 AM
+Southwest Airlines;1703;PROVIDENCE(PVD);7:35 AM
+American Airlines;5930;SANTA BARBARA(SBA);7:40 AM
+American Airlines;2672;SACRAMENTO(SMF);7:40 AM
+American Airlines;2672;CHICAGO - O'HARE(ORD);7:40 AM
+American Airlines;553;ORANGE COUNTY(SNA);7:45 AM
+American Airlines;5934;ONTARIO(ONT);7:45 AM
+Southwest Airlines;1734;EL PASO(ELP);7:45 AM
+Southwest Airlines;1734;DALLAS(DAL);7:45 AM
+Southwest Airlines;8600;LOS ALAMITOS(SLI);7:50 AM
+American Airlines;1107;LAS VEGAS(LAS);7:50 AM
+American Airlines;1107;CHICAGO - O'HARE(ORD);7:50 AM
+American Airlines;5961;DALLAS-FT. WORTH(DFW);7:55 AM
+Southwest Airlines;248;BURBANK(BUR);7:55 AM
+Southwest Airlines;248;DALLAS(DAL);7:55 AM
+Southwest Airlines;248;NASHVILLE(BNA);7:55 AM
+Southwest Airlines;248;CHICAGO - MIDWAY(MDW);7:55 AM
+Alaska Airlines;637;SEATTLE(SEA);8:00 AM
+Southwest Airlines;311;SACRAMENTO(SMF);8:00 AM
+Southwest Airlines;186;SAN FRANCISCO(SFO);8:00 AM
+Southwest Airlines;186;DALLAS(DAL);8:00 AM
+Southwest Airlines;186;ST. LOUIS(STL);8:00 AM
+Southwest Airlines;186;LAS VEGAS(LAS);8:00 AM
+Southwest Airlines;1870;LOS ANGELES(LAX);8:00 AM
+Southwest Airlines;1870;RENO(RNO);8:00 AM
+Southwest Airlines;723;SEATTLE(SEA);8:00 AM
+Southwest Airlines;6290;SAN JOSE(SJC);8:00 AM
+American Airlines;9616;SAN SALVADOR(SAL);8:00 AM
+Southwest Airlines;1746;OAKLAND(OAK);8:05 AM
+Southwest Airlines;1746;PORTLAND(PDX);8:05 AM
+Southwest Airlines;1746;DENVER(DEN);8:05 AM
+Southwest Airlines;31;ALBUQUERQUE(ABQ);8:05 AM
+Southwest Airlines;31;DALLAS(DAL);8:05 AM
+Southwest Airlines;31;HOUSTON(HOU);8:05 AM
+Southwest Airlines;31;CHARLESTON, S.C.(CHS);8:05 AM
+Southwest Airlines;668;ONTARIO(ONT);8:05 AM
+Southwest Airlines;668;SACRAMENTO(SMF);8:05 AM
+Southwest Airlines;1716;SAN DIEGO(SAN);8:05 AM
+Southwest Airlines;1418;PORTLAND(PDX);8:10 AM
+Southwest Airlines;158;RENO(RNO);8:15 AM
+Southwest Airlines;1099;DENVER(DEN);8:25 AM
+Southwest Airlines;1099;CHICAGO - MIDWAY(MDW);8:25 AM
+Frontier Airlines;1276;CHICAGO - O'HARE(ORD);8:29 AM
+Frontier Airlines;1276;TRENTON(TTN);8:29 AM
+American Airlines;595;WASHINGTON - NATIONAL(DCA);8:30 AM
+American Airlines;1899;CHARLOTTE(CLT);8:34 AM
+American Airlines;938;DENVER(DEN);8:35 AM
+American Airlines;2052;AUSTIN(AUS);8:35 AM
+American Airlines;2052;CHARLOTTE(CLT);8:35 AM
+American Airlines;2052;PORTLAND(PWM);8:35 AM
+American Airlines;1650;ATLANTA(ATL);8:35 AM
+American Airlines;3251;LUBBOCK(LBB);8:35 AM
+Southwest Airlines;1532;ORANGE COUNTY(SNA);8:35 AM
+American Airlines;463;MIAMI(MIA);8:37 AM
+American Airlines;463;CHARLOTTE(CLT);8:37 AM
+American Airlines;463;PROVIDENCE(PVD);8:37 AM
+American Airlines;532;LOS CABOS(SJD);8:39 AM
+American Airlines;619;MEXICO CITY(MEX);8:40 AM
+American Airlines;5804;ST. LOUIS(STL);8:40 AM
+Southwest Airlines;1797;LAS VEGAS(LAS);8:40 AM
+American Airlines;5906;ALBUQUERQUE(ABQ);8:41 AM
+American Airlines;646;BOSTON(BOS);8:42 AM
+American Airlines;3068;YUMA(YUM);8:43 AM
+American Airlines;1985;PHILADELPHIA(PHL);8:44 AM
+American Airlines;3071;FLAGSTAFF(FLG);8:44 AM
+American Airlines;1598;NEWARK(EWR);8:45 AM
+American Airlines;1598;CHICAGO - O'HARE(ORD);8:45 AM
+American Airlines;665;COLUMBUS(CMH);8:45 AM
+American Airlines;3022;GRAND JUNCTION(GJT);8:47 AM
+American Airlines;106;NEW YORK-KENNEDY(JFK);8:48 AM
+American Airlines;106;LONDON-HEATHROW(LHR);8:48 AM
+American Airlines;3080;ROSWELL(ROW);8:49 AM
+American Airlines;499;MINN/ST.PAUL(MSP);8:49 AM
+Boutique Air;812;SHOW LOW(SOW);8:50 AM
+American Airlines;593;CHICAGO - O'HARE(ORD);8:51 AM
+American Airlines;489;PITTSBURGH(PIT);8:52 AM
+American Airlines;5916;TUCSON(TUS);8:52 AM
+American Airlines;5785;DURANGO(DRO);8:53 AM
+American Airlines;467;OMAHA(OMA);8:54 AM
+American Airlines;649;DALLAS-FT. WORTH(DFW);8:55 AM
+American Airlines;1245;CANCUN(CUN);8:55 AM
+American Airlines;578;TAMPA(TPA);8:58 AM
+American Airlines;2094;DES MOINES(DSM);8:58 AM
+American Airlines;460;INDIANAPOLIS(IND);8:59 AM
+American Airlines;460;LOS ANGELES(LAX);8:59 AM
+American Airlines;2614;HOUSTON(IAH);8:59 AM
+American Airlines;5803;SAN ANTONIO(SAT);8:59 AM
+American Airlines;5892;EL PASO(ELP);8:59 AM
+United Airlines;604;DENVER(DEN);9:00 AM
+American Airlines;567;ORLANDO(MCO);9:00 AM
+Delta Air Lines;743;MINN/ST.PAUL(MSP);9:00 AM
+Southwest Airlines;6331;LOS ANGELES(LAX);9:00 AM
+Southwest Airlines;6331;NASHVILLE(BNA);9:00 AM
+American Airlines;925;BALTIMORE/WASHINGTON(BWI);9:01 AM
+Southwest Airlines;1650;SACRAMENTO(SMF);9:05 AM
+Southwest Airlines;1448;SAN DIEGO(SAN);9:05 AM
+Southwest Airlines;1448;ALBUQUERQUE(ABQ);9:05 AM
+Southwest Airlines;5475;ONTARIO(ONT);9:25 AM
+Southwest Airlines;5475;SACRAMENTO(SMF);9:25 AM
+Southwest Airlines;6315;OMAHA(OMA);9:30 AM
+Southwest Airlines;6342;SAN FRANCISCO(SFO);9:40 AM
+Southwest Airlines;6342;CHICAGO - MIDWAY(MDW);9:40 AM
+Southwest Airlines;1544;BALTIMORE/WASHINGTON(BWI);9:45 AM
+Southwest Airlines;1544;ORLANDO(MCO);9:45 AM
+American Airlines;588;SAN JOSE(SJC);9:55 AM
+American Airlines;1572;SACRAMENTO(SMF);9:55 AM
+American Airlines;3078;SANTA ROSA(STS);9:55 AM
+American Airlines;3133;SAINT GEORGE(SGU);9:55 AM
+American Airlines;625;BOISE(BOI);9:55 AM
+Delta Air Lines;2574;DETROIT(DTW);9:55 AM
+American Airlines;493;OAKLAND(OAK);9:56 AM
+American Airlines;3075;BAKERSFIELD(BFL);9:57 AM
+American Airlines;5901;HERMOSILLO(HMO);9:58 AM
+American Airlines;447;LOS ANGELES(LAX);10:00 AM
+American Airlines;1456;ORANGE COUNTY(SNA);10:00 AM
+American Airlines;5820;PALM SPRINGS(PSP);10:00 AM
+Southwest Airlines;1871;SAN DIEGO(SAN);10:00 AM
+Southwest Airlines;1871;RENO(RNO);10:00 AM
+American Airlines;531;RENO(RNO);10:02 AM
+American Airlines;5979;MONTEREY(MRY);10:03 AM
+Sun Country Airlines;606;MINN/ST.PAUL(MSP);10:05 AM
+American Airlines;406;DETROIT(DTW);10:06 AM
+United Airlines;1597;DENVER(DEN);10:06 AM
+American Airlines;534;LOS CABOS(SJD);10:09 AM
+American Airlines;433;SAN FRANCISCO(SFO);10:10 AM
+American Airlines;669;PHILADELPHIA(PHL);10:10 AM
+American Airlines;767;CHARLOTTE(CLT);10:10 AM
+American Airlines;5917;FRESNO(FAT);10:11 AM
+American Airlines;5910;SAN LUIS OBISPO(SBP);10:13 AM
+American Airlines;506;VANCOUVER(YVR);10:13 AM
+American Airlines;5891;MAZATLAN(MZT);10:14 AM
+Delta Air Lines;1546;ATLANTA(ATL);10:14 AM
+Delta Air Lines;5785;LOS ANGELES(LAX);10:14 AM
+American Airlines;3224;BULLHEAD(IFP);10:15 AM
+American Airlines;5838;SANTA BARBARA(SBA);10:15 AM
+American Airlines;5935;BURBANK(BUR);10:15 AM
+Southwest Airlines;1626;RALEIGH/DURHAM(RDU);10:15 AM
+Southwest Airlines;1492;BUFFALO(BUF);10:15 AM
+Southwest Airlines;1492;BALTIMORE/WASHINGTON(BWI);10:15 AM
+Southwest Airlines;1492;CHARLESTON, S.C.(CHS);10:15 AM
+Southwest Airlines;140;AUSTIN(AUS);10:15 AM
+Southwest Airlines;1832;DETROIT(DTW);10:15 AM
+Southwest Airlines;1832;BALTIMORE/WASHINGTON(BWI);10:15 AM
+Southwest Airlines;153;ORLANDO(MCO);10:15 AM
+Southwest Airlines;153;ATLANTA(ATL);10:15 AM
+Southwest Airlines;622;MILWAUKEE(MKE);10:15 AM
+Southwest Airlines;622;ATLANTA(ATL);10:15 AM
+Southwest Airlines;622;ORLANDO(MCO);10:15 AM
+Great Lakes Airlines;3036;PAGE(PGA);10:15 AM
+American Airlines;1468;SALT LAKE CITY(SLC);10:16 AM
+United Airlines;1680;HOUSTON(IAH);10:16 AM
+United Airlines;1680;TAMPA(TPA);10:16 AM
+American Airlines;6004;TUCSON(TUS);10:17 AM
+American Airlines;319;PORTLAND(PDX);10:20 AM
+American Airlines;319;CHICAGO - O'HARE(ORD);10:20 AM
+American Airlines;684;LIHUE(LIH);10:20 AM
+Southwest Airlines;720;PITTSBURGH(PIT);10:20 AM
+Southwest Airlines;720;CHICAGO - MIDWAY(MDW);10:20 AM
+Southwest Airlines;1410;NEWARK(EWR);10:20 AM
+Southwest Airlines;1410;INDIANAPOLIS(IND);10:20 AM
+Southwest Airlines;5469;CLEVELAND(CLE);10:20 AM
+Southwest Airlines;5469;NASHVILLE(BNA);10:20 AM
+Southwest Airlines;5469;BOSTON(BOS);10:20 AM
+Delta Air Lines;2385;SALT LAKE CITY(SLC);10:22 AM
+American Airlines;1452;ONTARIO(ONT);10:22 AM
+American Airlines;586;SPOKANE(GEG);10:25 AM
+American Airlines;1646;LAS VEGAS(LAS);10:25 AM
+Southwest Airlines;804;FORT LAUDERDALE(FLL);10:25 AM
+Southwest Airlines;804;TAMPA(TPA);10:25 AM
+Southwest Airlines;804;CHICAGO - MIDWAY(MDW);10:25 AM
+Southwest Airlines;1389;INDIANAPOLIS(IND);10:25 AM
+Southwest Airlines;1389;DALLAS(DAL);10:25 AM
+Southwest Airlines;1389;WASHINGTON - NATIONAL(DCA);10:25 AM
+Southwest Airlines;1438;TAMPA(TPA);10:25 AM
+American Airlines;579;MILWAUKEE(MKE);10:30 AM
+American Airlines;2378;SAN DIEGO(SAN);10:30 AM
+Southwest Airlines;1883;WICHITA(ICT);10:30 AM
+United Airlines;1987;CHICAGO - O'HARE(ORD);10:32 AM
+American Airlines;663;KONA(KOA);10:35 AM
+American Airlines;692;HONOLULU(HNL);10:35 AM
+American Airlines;710;CHICAGO - O'HARE(ORD);10:35 AM
+Southwest Airlines;1584;PHILADELPHIA(PHL);10:35 AM
+American Airlines;1431;SEATTLE(SEA);10:40 AM
+Air Canada;8229;VANCOUVER(YVR);10:40 AM
+American Airlines;432;MAUI(OGG);10:45 AM
+Southwest Airlines;1673;SAN ANTONIO(SAT);10:45 AM
+Southwest Airlines;1673;HOUSTON(HOU);10:45 AM
+Southwest Airlines;5823;COLUMBUS(CMH);10:45 AM
+Southwest Airlines;5823;WASHINGTON - NATIONAL(DCA);10:45 AM
+Southwest Airlines;5823;PROVIDENCE(PVD);10:45 AM
+United Airlines;1552;NEWARK(EWR);10:46 AM
+American Airlines;560;DALLAS-FT. WORTH(DFW);10:50 AM
+American Airlines;560;WASHINGTON - NATIONAL(DCA);10:50 AM
+Southwest Airlines;1846;TULSA(TUL);10:55 AM
+Southwest Airlines;1846;DALLAS(DAL);10:55 AM
+Southwest Airlines;1846;CHICAGO - MIDWAY(MDW);10:55 AM
+Southwest Airlines;1846;SEATTLE(SEA);10:55 AM
+Delta Air Lines;1994;NEW YORK-KENNEDY(JFK);11:00 AM
+United Airlines;5435;LOS ANGELES(LAX);11:00 AM
+Southwest Airlines;899;LITTLE ROCK(LIT);11:00 AM
+Southwest Airlines;1424;LOUISVILLE(SDF);11:00 AM
+Southwest Airlines;1424;CHICAGO - MIDWAY(MDW);11:00 AM
+United Airlines;5603;SAN FRANCISCO(SFO);11:10 AM
+Delta Air Lines;5714;SEATTLE(SEA);11:15 AM
+Southwest Airlines;5466;SAN JOSE(SJC);11:15 AM
+Southwest Airlines;5466;PORTLAND(PDX);11:15 AM
+Alaska Airlines;657;SEATTLE(SEA);11:20 AM
+Southwest Airlines;1661;SEATTLE(SEA);11:25 AM
+Southwest Airlines;148;CHICAGO - MIDWAY(MDW);11:25 AM
+Southwest Airlines;148;BIRMINGHAM(BHM);11:25 AM
+Southwest Airlines;148;HOUSTON(HOU);11:25 AM
+Southwest Airlines;148;EL PASO(ELP);11:25 AM
+Delta Air Lines;160;MINN/ST.PAUL(MSP);11:30 AM
+Delta Air Lines;160;AMSTERDAM(AMS);11:30 AM
+Air Canada;8305;CALGARY(YYC);11:40 AM
+United Airlines;523;CHICAGO - O'HARE(ORD);11:40 AM
+Southwest Airlines;116;LAS VEGAS(LAS);11:40 AM
+Southwest Airlines;116;OAKLAND(OAK);11:40 AM
+Southwest Airlines;116;ORANGE COUNTY(SNA);11:40 AM
+Southwest Airlines;1550;DENVER(DEN);11:40 AM
+Southwest Airlines;1670;BURBANK(BUR);11:45 AM
+Southwest Airlines;1670;SACRAMENTO(SMF);11:45 AM
+Southwest Airlines;1029;LOS ANGELES(LAX);11:45 AM
+Southwest Airlines;1564;SALT LAKE CITY(SLC);11:50 AM
+Southwest Airlines;1415;PORTLAND(PDX);12:00 PM
+Southwest Airlines;1415;OAKLAND(OAK);12:00 PM
+Southwest Airlines;1415;LOS ANGELES(LAX);12:00 PM
+Boutique Air;642;SILVER CITY(SVC);12:00 PM
+American Airlines;1783;CHARLOTTE(CLT);12:10 PM
+American Airlines;1783;BOSTON(BOS);12:10 PM
+American Airlines;2527;NEW YORK-KENNEDY(JFK);12:10 PM
+American Airlines;612;ATLANTA(ATL);12:15 PM
+American Airlines;3055;SANTA FE(SAF);12:15 PM
+American Airlines;1773;DENVER(DEN);12:17 PM
+American Airlines;776;PHILADELPHIA(PHL);12:20 PM
+American Airlines;776;SHANNON(SNN);12:20 PM
+American Airlines;1691;DALLAS-FT. WORTH(DFW);12:20 PM
+Southwest Airlines;6026;OAKLAND(OAK);12:20 PM
+American Airlines;5902;GUADALAJARA(GDL);12:21 PM
+American Airlines;1380;MINN/ST.PAUL(MSP);12:25 PM
+American Airlines;2930;ALBUQUERQUE(ABQ);12:25 PM
+American Airlines;5919;SIOUX FALLS(FSD);12:25 PM
+Southwest Airlines;5407;OKLAHOMA CITY(OKC);12:25 PM
+Southwest Airlines;5407;ST. LOUIS(STL);12:25 PM
+Southwest Airlines;5407;BALTIMORE/WASHINGTON(BWI);12:25 PM
+Southwest Airlines;1241;MINN/ST.PAUL(MSP);12:25 PM
+Southwest Airlines;1241;BALTIMORE/WASHINGTON(BWI);12:25 PM
+American Airlines;208;CHICAGO - O'HARE(ORD);12:27 PM
+American Airlines;208;DUBLIN(DUB);12:27 PM
+American Airlines;483;SAN ANTONIO(SAT);12:30 PM
+American Airlines;2189;BOSTON(BOS);12:30 PM
+American Airlines;5912;EL PASO(ELP);12:30 PM
+Boutique Air;774;CORTEZ(CEZ);12:30 PM
+Delta Air Lines;2888;DETROIT(DTW);12:33 PM
+American Airlines;594;KANSAS CITY(MCI);12:35 PM
+American Airlines;2047;AUSTIN(AUS);12:35 PM
+American Airlines;5770;HOUSTON(IAH);12:35 PM
+Southwest Airlines;5812;AUSTIN(AUS);12:35 PM
+Southwest Airlines;5812;NEW ORLEANS(MSY);12:35 PM
+Southwest Airlines;5812;NASHVILLE(BNA);12:35 PM
+Southwest Airlines;5812;CLEVELAND(CLE);12:35 PM
+Southwest Airlines;6182;HOUSTON(HOU);12:40 PM
+Southwest Airlines;429;EL PASO(ELP);12:40 PM
+Southwest Airlines;6090;ORANGE COUNTY(SNA);12:40 PM
+Southwest Airlines;6090;SAN JOSE(SJC);12:40 PM
+American Airlines;680;WASHINGTON - NATIONAL(DCA);12:45 PM
+Southwest Airlines;1654;LOS ANGELES(LAX);12:45 PM
+Southwest Airlines;1654;NASHVILLE(BNA);12:45 PM
+Southwest Airlines;1019;LAS VEGAS(LAS);12:45 PM
+Southwest Airlines;1019;DALLAS(DAL);12:45 PM
+Southwest Airlines;1019;TAMPA(TPA);12:45 PM
+Southwest Airlines;893;DALLAS(DAL);12:55 PM
+Southwest Airlines;893;NEW YORK-LAGUARDIA(LGA);12:55 PM
+Air Canada;1836;TORONTO(YYZ);1:00 PM
+Southwest Airlines;917;BOISE(BOI);1:00 PM
+Delta Air Lines;5828;LOS ANGELES(LAX);1:05 PM
+Alaska Airlines;659;PORTLAND(PDX);1:10 PM
+Southwest Airlines;1802;ALBUQUERQUE(ABQ);1:15 PM
+Southwest Airlines;1802;HOUSTON(HOU);1:15 PM
+Southwest Airlines;1802;TAMPA(TPA);1:15 PM
+Delta Air Lines;1772;ATLANTA(ATL);1:20 PM
+WestJet Airlines;1403;CALGARY(YYC);1:20 PM
+Volaris;975;GUADALAJARA(GDL);1:20 PM
+American Airlines;550;DALLAS-FT. WORTH(DFW);1:23 PM
+Southwest Airlines;1769;SAN FRANCISCO(SFO);1:25 PM
+Southwest Airlines;1769;DALLAS(DAL);1:25 PM
+Southwest Airlines;1769;LUBBOCK(LBB);1:25 PM
+American Airlines;413;SACRAMENTO(SMF);1:30 PM
+American Airlines;2974;EUGENE(EUG);1:30 PM
+American Airlines;2974;LOS ANGELES(LAX);1:30 PM
+American Airlines;3109;PALM SPRINGS(PSP);1:30 PM
+Great Lakes Airlines;3032;PAGE(PGA);1:30 PM
+Southwest Airlines;6172;SPOKANE(GEG);1:30 PM
+Southwest Airlines;1064;SAN DIEGO(SAN);1:30 PM
+American Airlines;638;SAN JOSE(SJC);1:31 PM
+American Airlines;1618;MIAMI(MIA);1:35 PM
+American Airlines;3040;YUMA(YUM);1:37 PM
+United Airlines;235;HOUSTON(IAH);1:40 PM
+Southwest Airlines;5877;SACRAMENTO(SMF);1:40 PM
+American Airlines;5812;TUCSON(TUS);1:42 PM
+American Airlines;492;CHICAGO - O'HARE(ORD);1:45 PM
+American Airlines;5944;FRESNO(FAT);1:45 PM
+American Airlines;5985;MONTEREY(MRY);1:45 PM
+American Airlines;5959;SANTA BARBARA(SBA);1:47 PM
+Delta Air Lines;2124;SALT LAKE CITY(SLC);1:49 PM
+American Airlines;450;SALT LAKE CITY(SLC);1:50 PM
+American Airlines;2993;MEDFORD(MFR);1:50 PM
+American Airlines;2993;LOS ANGELES(LAX);1:50 PM
+American Airlines;5907;LONG BEACH(LGB);1:50 PM
+American Airlines;2023;LOS ANGELES(LAX);1:50 PM
+Southwest Airlines;5901;ONTARIO(ONT);1:50 PM
+Southwest Airlines;5901;SACRAMENTO(SMF);1:50 PM
+American Airlines;2548;ORANGE COUNTY(SNA);1:55 PM
+American Airlines;2548;DALLAS-FT. WORTH(DFW);1:55 PM
+American Airlines;5793;SAN LUIS OBISPO(SBP);1:55 PM
+American Airlines;2602;SEATTLE(SEA);1:55 PM
+United Airlines;344;DENVER(DEN);1:55 PM
+United Airlines;344;WASHINGTON DULLES(IAD);1:55 PM
+Southwest Airlines;1406;BURBANK(BUR);1:55 PM
+American Airlines;694;HONOLULU(HNL);1:59 PM
+American Airlines;639;SAN DIEGO(SAN);2:00 PM
+American Airlines;639;DALLAS-FT. WORTH(DFW);2:00 PM
+Delta Air Lines;1769;MINN/ST.PAUL(MSP);2:05 PM
+American Airlines;1826;LAS VEGAS(LAS);2:05 PM
+Southwest Airlines;1874;CHICAGO - MIDWAY(MDW);2:05 PM
+Southwest Airlines;1874;INDIANAPOLIS(IND);2:05 PM
+American Airlines;5790;BURBANK(BUR);2:06 PM
+American Airlines;307;PORTLAND(PDX);2:10 PM
+Frontier Airlines;1750;COLORADO SPRINGS(COS);2:15 PM
+Frontier Airlines;1750;ORLANDO(MCO);2:15 PM
+Southwest Airlines;5490;TULSA(TUL);2:15 PM
+Southwest Airlines;5490;DALLAS(DAL);2:15 PM
+Southwest Airlines;5560;ST. LOUIS(STL);2:15 PM
+Southwest Airlines;5560;NEW YORK-LAGUARDIA(LGA);2:15 PM
+Southwest Airlines;1725;HOUSTON(HOU);2:20 PM
+American Airlines;3032;BAKERSFIELD(BFL);2:25 PM
+Southwest Airlines;1467;ORANGE COUNTY(SNA);2:25 PM
+Southwest Airlines;6232;ATLANTA(ATL);2:35 PM
+Southwest Airlines;6232;MINN/ST.PAUL(MSP);2:35 PM
+American Airlines;5947;ONTARIO(ONT);2:40 PM
+Southwest Airlines;5836;SAN DIEGO(SAN);2:40 PM
+Southwest Airlines;5836;SAN JOSE(SJC);2:40 PM
+Southwest Airlines;6328;SAN JOSE(SJC);2:45 PM
+United Airlines;2000;CHICAGO - O'HARE(ORD);2:49 PM
+United Airlines;2000;WASHINGTON DULLES(IAD);2:49 PM
+Southwest Airlines;1450;ALBUQUERQUE(ABQ);2:50 PM
+Southwest Airlines;1622;DENVER(DEN);2:50 PM
+Southwest Airlines;1622;PHILADELPHIA(PHL);2:50 PM
+American Airlines;623;CHARLOTTE(CLT);2:51 PM
+American Airlines;623;CHICAGO - O'HARE(ORD);2:51 PM
+American Airlines;1248;DENVER(DEN);3:09 PM
+American Airlines;3221;PALM SPRINGS(PSP);3:14 PM
+American Airlines;551;DALLAS-FT. WORTH(DFW);3:15 PM
+Southwest Airlines;1947;AUSTIN(AUS);3:15 PM
+American Airlines;574;TAMPA(TPA);3:17 PM
+American Airlines;985;NEW YORK-KENNEDY(JFK);3:17 PM
+American Airlines;1434;SAN ANTONIO(SAT);3:17 PM
+American Airlines;562;COLUMBUS(CMH);3:20 PM
+American Airlines;5905;AUSTIN(AUS);3:20 PM
+American Airlines;5927;ALBUQUERQUE(ABQ);3:20 PM
+American Airlines;5928;EL PASO(ELP);3:20 PM
+Southwest Airlines;5725;SAN ANTONIO(SAT);3:20 PM
+American Airlines;1712;PHILADELPHIA(PHL);3:25 PM
+American Airlines;5942;TUCSON(TUS);3:25 PM
+American Airlines;1597;BALTIMORE/WASHINGTON(BWI);3:28 PM
+American Airlines;424;DETROIT(DTW);3:29 PM
+American Airlines;3037;FLAGSTAFF(FLG);3:30 PM
+American Airlines;429;CHICAGO - O'HARE(ORD);3:30 PM
+American Airlines;634;PITTSBURGH(PIT);3:30 PM
+American Airlines;2982;DURANGO(DRO);3:30 PM
+American Airlines;2997;LOS ANGELES(LAX);3:30 PM
+Alaska Airlines;581;SEATTLE(SEA);3:30 PM
+American Airlines;415;MEMPHIS(MEM);3:35 PM
+American Airlines;500;INDIANAPOLIS(IND);3:40 PM
+American Airlines;1467;NEWARK(EWR);3:40 PM
+Southwest Airlines;1359;DALLAS(DAL);3:40 PM
+Southwest Airlines;5364;LOS ANGELES(LAX);3:45 PM
+Southwest Airlines;1786;DENVER(DEN);3:50 PM
+Southwest Airlines;6282;ONTARIO(ONT);3:55 PM
+Southwest Airlines;1729;LAS VEGAS(LAS);3:55 PM
+Southwest Airlines;1729;PORTLAND(PDX);3:55 PM
+Southwest Airlines;1729;SAN JOSE(SJC);3:55 PM
+Southwest Airlines;5441;NASHVILLE(BNA);4:00 PM
+Southwest Airlines;5498;KANSAS CITY(MCI);4:00 PM
+Southwest Airlines;5498;DENVER(DEN);4:00 PM
+United Airlines;6069;HOUSTON(IAH);4:06 PM
+Delta Air Lines;2046;ATLANTA(ATL);4:07 PM
+Southwest Airlines;6118;SALT LAKE CITY(SLC);4:10 PM
+Southwest Airlines;6118;SAN JOSE(SJC);4:10 PM
+Southwest Airlines;6118;LAS VEGAS(LAS);4:10 PM
+Southwest Airlines;1069;EL PASO(ELP);4:15 PM
+Southwest Airlines;1679;OAKLAND(OAK);4:15 PM
+Southwest Airlines;1679;ORANGE COUNTY(SNA);4:15 PM
+Boutique Air;816;SHOW LOW(SOW);4:20 PM
+Delta Air Lines;899;MINN/ST.PAUL(MSP);4:21 PM
+Southwest Airlines;294;SAN FRANCISCO(SFO);4:30 PM
+United Airlines;772;DENVER(DEN);4:34 PM
+Frontier Airlines;464;DENVER(DEN);4:35 PM
+Frontier Airlines;464;MINN/ST.PAUL(MSP);4:35 PM
+American Airlines;1422;SACRAMENTO(SMF);4:40 PM
+Southwest Airlines;6264;BURBANK(BUR);4:40 PM
+American Airlines;589;SAN JOSE(SJC);4:45 PM
+American Airlines;695;LOS ANGELES(LAX);4:45 PM
+American Airlines;711;DALLAS-FT. WORTH(DFW);4:45 PM
+American Airlines;3051;PALM SPRINGS(PSP);4:45 PM
+American Airlines;1886;OAKLAND(OAK);4:45 PM
+Southwest Airlines;838;DENVER(DEN);4:45 PM
+Southwest Airlines;838;DETROIT(DTW);4:45 PM
+Delta Air Lines;5680;SEATTLE(SEA);4:48 PM
+American Airlines;456;SALT LAKE CITY(SLC);4:50 PM
+American Airlines;5805;RENO(RNO);4:50 PM
+Southwest Airlines;1513;ALBUQUERQUE(ABQ);4:50 PM
+Delta Air Lines;5699;LOS ANGELES(LAX);4:55 PM
+Delta Air Lines;5749;SALT LAKE CITY(SLC);4:55 PM
+American Airlines;3041;TUCSON(TUS);4:56 PM
+American Airlines;5963;FRESNO(FAT);4:59 PM
+American Airlines;3223;FLAGSTAFF(FLG);4:59 PM
+American Airlines;686;SAN FRANCISCO(SFO);5:00 PM
+American Airlines;5766;LONG BEACH(LGB);5:00 PM
+American Airlines;5768;SAN LUIS OBISPO(SBP);5:00 PM
+Southwest Airlines;5526;SAN DIEGO(SAN);5:00 PM
+Southwest Airlines;5526;PORTLAND(PDX);5:00 PM
+Great Lakes Airlines;3042;PAGE(PGA);5:00 PM
+Southwest Airlines;1647;DALLAS(DAL);5:00 PM
+Southwest Airlines;1647;AMARILLO(AMA);5:00 PM
+Southwest Airlines;5690;CHICAGO - MIDWAY(MDW);5:00 PM
+American Airlines;5987;SANTA BARBARA(SBA);5:05 PM
+American Airlines;1458;PORTLAND(PDX);5:05 PM
+Southwest Airlines;5771;BALTIMORE/WASHINGTON(BWI);5:05 PM
+United Airlines;1839;SAN FRANCISCO(SFO);5:05 PM
+American Airlines;1151;SAN DIEGO(SAN);5:09 PM
+American Airlines;481;SEATTLE(SEA);5:10 PM
+American Airlines;636;LAS VEGAS(LAS);5:10 PM
+American Airlines;2199;ORANGE COUNTY(SNA);5:15 PM
+American Airlines;3258;BEND(RDM);5:15 PM
+American Airlines;644;ONTARIO(ONT);5:15 PM
+Southwest Airlines;267;ONTARIO(ONT);5:15 PM
+Southwest Airlines;267;SACRAMENTO(SMF);5:15 PM
+American Airlines;2581;VANCOUVER(YVR);5:20 PM
+Southwest Airlines;1695;LAS VEGAS(LAS);5:40 PM
+Southwest Airlines;1555;DENVER(DEN);5:45 PM
+Southwest Airlines;6228;LOS ANGELES(LAX);5:50 PM
+Southwest Airlines;6228;SACRAMENTO(SMF);5:50 PM
+Southwest Airlines;1469;ORANGE COUNTY(SNA);5:55 PM
+Southwest Airlines;1469;SAN FRANCISCO(SFO);5:55 PM
+Southwest Airlines;1469;LAS VEGAS(LAS);5:55 PM
+Southwest Airlines;6253;SAN DIEGO(SAN);6:00 PM
+Southwest Airlines;6253;SACRAMENTO(SMF);6:00 PM
+Southwest Airlines;1766;BURBANK(BUR);6:05 PM
+Southwest Airlines;1766;OAKLAND(OAK);6:05 PM
+Southwest Airlines;1766;SALT LAKE CITY(SLC);6:05 PM
+Delta Air Lines;5693;LOS ANGELES(LAX);6:09 PM
+Southwest Airlines;1677;AUSTIN(AUS);6:10 PM
+Southwest Airlines;348;SAN ANTONIO(SAT);6:10 PM
+Southwest Airlines;411;NEW ORLEANS(MSY);6:10 PM
+Southwest Airlines;465;HOUSTON(HOU);6:10 PM
+United Airlines;5436;LOS ANGELES(LAX);6:15 PM
+Southwest Airlines;5612;DALLAS(DAL);6:20 PM
+Southwest Airlines;6204;ONTARIO(ONT);6:25 PM
+Southwest Airlines;946;OKLAHOMA CITY(OKC);6:25 PM
+Southwest Airlines;1533;OMAHA(OMA);6:30 PM
+American Airlines;5926;ODESSA/MIDLAND(MAF);6:35 PM
+American Airlines;3036;GRAND JUNCTION(GJT);6:40 PM
+American Airlines;548;MILWAUKEE(MKE);6:40 PM
+American Airlines;5940;AUSTIN(AUS);6:40 PM
+Southwest Airlines;262;CHICAGO - MIDWAY(MDW);6:40 PM
+American Airlines;5952;ALBUQUERQUE(ABQ);6:42 PM
+American Airlines;5950;EL PASO(ELP);6:43 PM
+American Airlines;3050;YUMA(YUM);6:44 PM
+Southwest Airlines;5405;ST. LOUIS(STL);6:45 PM
+American Airlines;5948;TUCSON(TUS);6:46 PM
+American Airlines;477;HOUSTON(IAH);6:48 PM
+American Airlines;3054;PALM SPRINGS(PSP);6:50 PM
+Southwest Airlines;1968;MINN/ST.PAUL(MSP);6:50 PM
+Southwest Airlines;1834;SEATTLE(SEA);6:50 PM
+American Airlines;486;CHICAGO - O'HARE(ORD);6:51 PM
+Delta Air Lines;2255;SALT LAKE CITY(SLC);6:52 PM
+American Airlines;440;SAN ANTONIO(SAT);6:53 PM
+American Airlines;490;OMAHA(OMA);6:55 PM
+American Airlines;1017;ST. LOUIS(STL);6:55 PM
+American Airlines;1494;DENVER(DEN);6:55 PM
+American Airlines;1119;MINN/ST.PAUL(MSP);6:55 PM
+Southwest Airlines;1825;NASHVILLE(BNA);6:55 PM
+Boutique Air;814;SHOW LOW(SOW);6:55 PM
+Southwest Airlines;5897;KANSAS CITY(MCI);6:55 PM
+Southwest Airlines;1182;MILWAUKEE(MKE);6:55 PM
+American Airlines;545;DALLAS-FT. WORTH(DFW);6:59 PM
+American Airlines;614;DES MOINES(DSM);6:59 PM
