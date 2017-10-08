@@ -55,14 +55,22 @@ end
 
 %--->Arrivals
 for i = 1:1:length(FileArrivals{1,1})
+  
     DataA.Number(i,1) = i;
     DataA.Airline(i) = FileArrivals{1,1}{i,1};
     DataA.FlightID(i) = FileArrivals{1,2}(i);
     ETA = string(FileArrivals{1,5}(i));
     ETA = strsplit(ETA,' ');
-    ETA = strsplit(ETA(1),':');
-    DataA.ETA(i,1) = ETA(1);
-    DataA.ETA(i,2) = ETA(2);
+    ETAH = strsplit(ETA(1),':');
+    
+    if(strcmp(ETA(2),'PM') && str2double(ETAH(1)) < 12)
+        DataA.ETA(i,1) = str2double(ETAH(1)) + 12;
+        DataA.ETA(i,2) = ETAH(2);
+    else
+        DataA.ETA(i,1) = ETAH(1);
+        DataA.ETA(i,2) = ETAH(2);
+    end
+    
     DataA.City_O(i) = FileArrivals{1,3}{i,1};
     DataA.IATA_O(i) = FileArrivals{1,4}{i,1};
     DataA.IATA_D(i) = "PHX";
@@ -71,10 +79,12 @@ for i = 1:1:length(FileArrivals{1,1})
     DataA.Lon_D(i) = double(-112.01200103759766);
     DataA.Alt_D(i) = int16(1135);
     
-    if(strcmp('American Airlines',DataA.Airline(i))||strcmp('Delta Air Lines',DataA.Airline(i))||strcmp('United Airlines',DataA.Airline(i))||strcmp('Air Canada',DataA.Airline(i))||strcmp('British Airways',DataA.Airline(i)))
-        DataA.CPAX(i) = randi([0 40],'int8');
+    if(DataA.Int == 1)
+        DataA.CPAX(i) = randi([0 50],'int8');     
+    elseif (strcmp('American Airlines',DataA.Airline(i))||strcmp('Delta Air Lines',DataA.Airline(i))||strcmp('United Airlines',DataA.Airline(i))||strcmp('Air Canada',DataA.Airline(i))||strcmp('British Airways',DataA.Airline(i)))
+        DataA.CPAX(i) = randi([0 20],'int8');        
     else
-        DataA.CPAX(i) = randi([0 15],'int8');
+        DataA.CPAX(i) = randi([0 10],'int8');
     end
     
     for j = 1:1:length(NationalIATAName)
@@ -89,8 +99,6 @@ for i = 1:1:length(FileArrivals{1,1})
         end
     end
 end
-% DataA.ETA = FileArrivals{1,5};
-
 
 for i=1:DataA.Number(end)
     if DataA.Int(i) == true
@@ -105,10 +113,8 @@ for i=1:DataA.Number(end)
 end
 
 DataA.Distance(:) = deg2nm(distance(DataA.Lat_O(:),DataA.Lon_O(:),DataA.Lat_D(:), DataA.Lon_D(:)));
+DataA.ETD(:) = sec2HHMM(HHMM2sec(DataA.ETA(:,:))-3600*DataA.Distance(:)/400);
 
-% datetime.setDefaultFormats('default','HH:mm:ss')
-% Format = 'HH:mm:ss'; DataA.ETD(:) = datetime(2017,9,18,0,0,((hour(DataA.ETA(:))*60+minute(DataA.ETA(:))) - 60*DataA.Distance(:)/400)*60);
-% DataA.ETD(:) = datetime(DataA.ETD(:),'InputFormat','HH:mm:ss');
 
 
 %--->Departures
@@ -118,9 +124,15 @@ for i = 1:1:length(FileDepartures{1,1})
     DataD.FlightID(i) = FileDepartures{1,2}(i);
     ETD = string(FileDepartures{1,5}(i));
     ETD = strsplit(ETD,' ');
-    ETD = strsplit(ETD(1),':');
-    DataD.ETD(i,1) = ETD(1);
-    DataD.ETD(i,2) = ETD(2);
+    ETDH = strsplit(ETD(1),':');
+    
+    if(strcmp(ETD(2),'PM') && str2double(ETDH(1)) < 12)
+        DataD.ETD(i,1) = str2double(ETDH(1)) + 12;
+        DataD.ETD(i,2) = ETDH(2);
+    else
+        DataD.ETD(i,1) = ETDH(1);
+        DataD.ETD(i,2) = ETDH(2);
+    end
     DataD.IATA_O(i) = "PHX";
     DataD.City_O(i) = "PHOENIX";
     DataD.Lat_O(i) = double(33.43429946899414);
@@ -129,10 +141,12 @@ for i = 1:1:length(FileDepartures{1,1})
     DataD.City_D(i) = FileDepartures{1,3}{i,1};
     DataD.IATA_D(i) = FileDepartures{1,4}{i,1};
 
-    if(strcmp('American Airlines',DataD.Airline(i))||strcmp('Delta Air Lines',DataD.Airline(i))||strcmp('United Airlines',DataD.Airline(i))||strcmp('Air Canada',DataD.Airline(i))||strcmp('British Airways',DataD.Airline(i)))
-        DataD.CPAX(i) = randi([0 40],'int8');
+    if(DataD.Int == 1)
+        DataD.CPAX(i) = randi([0 50],'int8');     
+    elseif (strcmp('American Airlines',DataD.Airline(i))||strcmp('Delta Air Lines',DataD.Airline(i))||strcmp('United Airlines',DataD.Airline(i))||strcmp('Air Canada',DataD.Airline(i))||strcmp('British Airways',DataD.Airline(i)))
+        DataD.CPAX(i) = randi([0 20],'int8');        
     else
-        DataD.CPAX(i) = randi([0 15],'int8');
+        DataD.CPAX(i) = randi([0 10],'int8');
     end
     
     for j = 1:1:length(NationalIATAName)
@@ -147,7 +161,7 @@ for i = 1:1:length(FileDepartures{1,1})
         end
     end
 end
-% DataD.ETA = FileDepartures{1,5};
+
 
 for i=1:DataD.Number(end)
     if DataD.Int(i) == true
@@ -162,5 +176,6 @@ for i=1:DataD.Number(end)
 end
 
 DataD.Distance(:) = deg2nm(distance(DataD.Lat_D(:),DataD.Lon_D(:),DataD.Lat_O(:), DataD.Lon_O(:)));
+DataD.ETA(:) = sec2HHMM(HHMM2sec(DataD.ETD(:,:))+3600*DataD.Distance(:)/400);
 
 toc; disp('Done!')
