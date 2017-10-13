@@ -1,4 +1,7 @@
 function [Slots] = computeSlotsGDP (HStart, Hend, HNoReg, PAAR, AAR)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [Slots] = computeSlotsGDP([11 00],[13 00],[15 03],20,60) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     Slots(:,1) = [(HStart(1)+HStart(2)/60):1/PAAR:(Hend(1)+Hend(2)/60) (Hend(1)+(1/PAAR)+Hend(2)/60):1/AAR:(HNoReg(1)+(HNoReg(2)+20)/60)];    
     Slots(:,3) = zeros(1,length(Slots));

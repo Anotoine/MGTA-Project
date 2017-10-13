@@ -9,7 +9,7 @@ FileDepartures = textscan(fileID,'%s%d%s %s ;%{h:mm a}D%*[^\n]','Delimiter',{';'
 fclose(fileID);
 
 fileID = fopen('airports.dat','r');
-Airports = textscan(fileID,'%d%s%s%s%s%s%f%f%f%s%s%s%*[^\n]','Delimiter',{',"','","','",',','});
+Airports = textscan(fileID,'%d%s%s%s%s%s%f%f%f%s%s%s%*[^\n]','Delimiter',{','','','','',',','});
 fclose(fileID);
 
 DataA = table(int16(1),"","","","",double(0),double(0),int16(0),"PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),[0 0],[0 0],false,int16(0),double(0),...
@@ -23,7 +23,7 @@ DataA.Properties.VariableUnits{'Lon_D'} = 'Degrees (Decimal)';
 DataA.Properties.VariableUnits{'Alt_O'} = 'Feet';
 DataA.Properties.VariableUnits{'Alt_D'} = 'Feet';
 
-DataD = table(int16(1),"","","PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),"","",double(0),double(0),int16(0),[0 0],[0 ],false,int16(0),double(0),...
+DataD = table(int16(1),"","","PHX","PHOENIX",double(33.43429946899414),double(-112.01200103759766),int16(1135),"","",double(0),double(0),int16(0),[0 0],[0 0],false,int16(0),double(0),...
     'VariableNames',{'Number','Airline','FlightID','IATA_O','City_O','Lat_O','Lon_O','Alt_O','IATA_D','City_D','Lat_D','Lon_D','Alt_D','ETA','ETD','Int','CPAX','Distance'});
 
 DataD.Properties.VariableUnits{'Distance'} = 'Nautical Miles';
@@ -36,7 +36,7 @@ DataD.Properties.VariableUnits{'Alt_D'} = 'Feet';
 
 %etime
 
-NationalLogical = (strcmp(Airports{1,4}, 'United States') | strcmp(Airports{1,4}, 'Canada'));
+NationalLogical = (strcmp(Airports{1,4}, '"United States"') | strcmp(Airports{1,4}, '"Canada"'));
 NationalIATAName = cell(sum(NationalLogical),1);
 NationalIATALat = zeros(sum(NationalLogical),1);
 NationalIATALon = zeros(sum(NationalLogical),1);
@@ -45,7 +45,7 @@ NationalIATAAlt = zeros(sum(NationalLogical),1);
 count = 1;
 for i = 1:1:length(NationalLogical)
     if NationalLogical(i) == true
-        NationalIATAName(count) = Airports{1,5}(i);
+        NationalIATAName(count) = strip(Airports{1,5}(i),'"');
         NationalIATALat(count) = Airports{1,7}(i);
         NationalIATALon(count) = Airports{1,8}(i);
         NationalIATAAlt(count) = Airports{1,9}(i);

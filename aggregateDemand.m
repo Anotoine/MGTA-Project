@@ -5,8 +5,7 @@
 
     close
 
-    ETA = minute(ETA) + hour(ETA)*60;
-
+    ETA = ETA(:,2) + ETA(:,1)*60;
     AggregatedDemand = [0 0];
     AggregatedDemandAAR = [];
     
@@ -58,8 +57,20 @@
         end
     end
     
-    HNoReg = datetime(2017,9,18,0,ETA(1)+AggregatedDemandAAR(end, 1),0,'Format','HH:mm a');
-    delay = datetime(2017,9,18,0,AggregatedDemandAAR(end, 1)-(ETA(1)+Hstart*60),0,'Format','HH:mm');
+    HNoReg = sec2HHMM(ETA(1)*60+AggregatedDemandAAR(end, 1)*60);
+    count1 = 1; count2 = 1; sum = 0;
+    for i = 75:length(AggregatedDemand)
+        if (AggregatedDemand(i,1) >= (Hstart*60)-ETA(1) && AggregatedDemand(i,1) < (Hend*60)-ETA(1))
+            d = AggregatedDemand(i,2) - AggregatedDemandPAAR(count1,2);
+            sum = sum + d;
+            count1 = count1 + 1;
+        elseif (AggregatedDemand(i,1) >= (Hend*60)-ETA(1) && AggregatedDemand(i,1) < (HNoReg(1)*60+HNoReg(2))-ETA(1))
+            d = AggregatedDemand(i,2) - AggregatedDemandAAR(count2,2);
+            sum = sum + d;
+            count2 = count2 + 1;
+        end
+    end
+    delay = sum;
     
 
     AggregatedDemand(:,1) = (AggregatedDemand(:,1)/60)+ETA(1)/60;

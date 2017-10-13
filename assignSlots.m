@@ -1,5 +1,8 @@
 function [slots, GroundDelay, AirDelay] = assignSlots (slots, ETA, Controlled, Excluded)
-    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [slots, GroundDelay, AirDelay] = assignSlots (slots, ETA, Controlled, Excluded) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
     AirDelay = [];
     GroundDelay = [];
     
