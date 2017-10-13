@@ -1,16 +1,16 @@
 function plotHistograms(ETA, CTA, AAR, PAAR)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% plotHistograms(ETA, CTA, 60, 30) %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% plotHistograms(ETA, CTA, AAR, PAAR %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     close; close;
 
     Capacity1(:,1) = 7:11;
-    Capacity1(:,2) = AAR;
-    Capacity2(:,1) = 11:13;
-    Capacity2(:,2) = PAAR;
-    Capacity3(:,1) = 13:19;
-    Capacity3(:,2) = AAR;
+    Capacity1(1:4,2) = PAAR;
+    Capacity2(:,1) = 11:19;
+    Capacity2(8:end,2) = PAAR;
+
+    Capacity2(5:7,2) = AAR;
     
     ETAH(:) = ETA(:,1) + ETA(:,2)/60;
     CTAH(:) = CTA(:,1) + CTA(:,2)/60;
@@ -22,17 +22,14 @@ function plotHistograms(ETA, CTA, AAR, PAAR)
     histogram(ETAH,edges)
     hold on;
     plot(Capacity1(:,1),Capacity1(:,2),'g')
-    plot(Capacity2(:,1),Capacity2(:,2),'r')
-    plot(Capacity3(:,1),Capacity3(:,2),'g')
+
     title('Histogram arrivals non-regulated traffic');
     xlabel('Time (hours)'); ylabel('Arrivals (# Aircrafts)');
 
     figure('name','CTA')
-    histogram(CTAH,edges)
+    histogram(CTAH)
     hold on;
-    plot(Capacity1(:,1),Capacity1(:,2),'g')
-    plot(Capacity2(:,1),Capacity2(:,2),'r')
-    plot(Capacity3(:,1),Capacity3(:,2),'g')
+    plot(Capacity(:,1),Capacity(:,2))
     title('Histogram arrivals regulated traffic');
     xlabel('Time (hours)'); ylabel('Arrivals (# Aircrafts)');
 
