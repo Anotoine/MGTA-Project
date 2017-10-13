@@ -1,13 +1,14 @@
  function [HNoReg, delay] = aggregateDemand(ETA, Hstart, Hend, PAAR, AAR)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% [HNoReg,delay] = aggregateDemand(DataA.ETA,11,13,20,60)  %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% [HNoReg,delay] = aggregateDemand (DataA.ETA, [11 0], [13 0], 20, 60)  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    close
-
-    ETA = ETA(:,2) + ETA(:,1)*60;
+    ETA = ETA(:,1)*60 + ETA(:,2);
+    Hstart = Hstart(1)*60 + Hstart(2);
+    Hend = Hend(1)*60 + Hend(2);    
     AggregatedDemand = [0 0];
     AggregatedDemandAAR = [];
+    AggDemandHstart = [];
     
     sum = 0;
     ETAStart = ETA(1);
@@ -22,7 +23,7 @@
     AggregatedDemand(end+1,1) = (ETA(i)-ETA(1))+5;
     AggregatedDemand(end,2) = sum;
 
-    findValue = Hstart*60-ETA(1);
+    findValue = Hstart-ETA(1);
     for i = 1:length(AggregatedDemand)
         if (AggregatedDemand(i,1) >= findValue)
             AggDemandHstart = AggregatedDemand(i,2);
@@ -30,9 +31,9 @@
         end
     end
     
-    AggregatedDemandPAAR = [(Hstart*60-ETA(1)) AggDemandHstart+(PAAR/60)];
-    for i = 1:(Hend-Hstart)*60
-        AggregatedDemandPAAR(end+1,1) = (Hstart*60-ETA(1))+i;
+    AggregatedDemandPAAR = [(Hstart-ETA(1)) AggDemandHstart+(PAAR/60)];
+    for i = 1:(Hend-Hstart)
+        AggregatedDemandPAAR(end+1,1) = (Hstart-ETA(1))+i;
         AggregatedDemandPAAR(end,2) = AggregatedDemandPAAR(end-1,2) + (PAAR/60);
     end
     
@@ -58,13 +59,14 @@
     end
     
     HNoReg = sec2HHMM(ETA(1)*60+AggregatedDemandAAR(end, 1)*60);
+    MNoReg = HNoReg(1)*60 + HNoReg(2);
     count1 = 1; count2 = 1; sum = 0;
     for i = 75:length(AggregatedDemand)
-        if (AggregatedDemand(i,1) >= (Hstart*60)-ETA(1) && AggregatedDemand(i,1) < (Hend*60)-ETA(1))
+        if (AggregatedDemand(i,1) >= Hstart-ETA(1) && AggregatedDemand(i,1) < Hend-ETA(1))
             d = AggregatedDemand(i,2) - AggregatedDemandPAAR(count1,2);
             sum = sum + d;
             count1 = count1 + 1;
-        elseif (AggregatedDemand(i,1) >= (Hend*60)-ETA(1) && AggregatedDemand(i,1) < (HNoReg(1)*60+HNoReg(2))-ETA(1))
+        elseif (AggregatedDemand(i,1) >= Hend-ETA(1) && AggregatedDemand(i,1) < MNoReg-ETA(1))
             d = AggregatedDemand(i,2) - AggregatedDemandAAR(count2,2);
             sum = sum + d;
             count2 = count2 + 1;
