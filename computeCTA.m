@@ -6,7 +6,6 @@ function CTA = computeCTA(ETA, GroundDelay, AirDelay)
     ETA = ETA(:,2) + ETA(:,1)*60;
     CTA = ETA;
     for i = 151:length(CTA)
-        pos = [];
         pos = find(GroundDelay(:,1) == i);
         if isempty(pos)
             pos = find(AirDelay(:,1) == i);

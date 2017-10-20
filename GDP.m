@@ -30,5 +30,5 @@ SlotsGDP = computeSlotsGDP (Hstart, Hend, HNoReg, PAAR, AAR);
 CTA = computeCTA (DataA.ETA, GroundDelay, AirDelay);
 
 % plotHistograms (ETA, CTA, AAR, PAAR)
-plotHistograms(DataA.ETA, CTA, AAR, PAAR)
+plotHistograms(DataA.ETA, CTA, AAR, PAAR);
 

@@ -17,7 +17,7 @@ function plotHistograms(ETA, CTA, AAR, PAAR)
 
 
     figure('name','ETA')
-    histogram(ETAH,edges)
+    histogram(floor(ETAH),edges)
     hold on;
     plot(Capacity1(:,1),Capacity1(:,2),'g')
     plot(Capacity2(:,1),Capacity2(:,2),'r')
@@ -26,7 +26,7 @@ function plotHistograms(ETA, CTA, AAR, PAAR)
     xlabel('Time (hours)'); ylabel('Arrivals (# Aircrafts)');
 
     figure('name','CTA')
-    histogram(CTAH,edges)
+    histogram(floor(CTAH),edges)
     hold on;
     plot(Capacity1(:,1),Capacity1(:,2),'g')
     plot(Capacity2(:,1),Capacity2(:,2),'r')
@@ -35,9 +35,9 @@ function plotHistograms(ETA, CTA, AAR, PAAR)
     xlabel('Time (hours)'); ylabel('Arrivals (# Aircrafts)');
     
     figure('name','ETA-CTA')
-    histogram(CTAH,edges)
+    histogram(CTAH,edges);
     hold on;
-    histogram(ETAH,edges)
+    histogram(ETAH,edges);
     plot(Capacity1(:,1),Capacity1(:,2),'g')
     plot(Capacity2(:,1),Capacity2(:,2),'r')
     plot(Capacity3(:,1),Capacity3(:,2),'g')

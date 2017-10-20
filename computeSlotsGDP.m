@@ -6,7 +6,7 @@ function [Slots] = computeSlotsGDP (HStart, Hend, HNoReg, PAAR, AAR)
     Hend = Hend(1)+Hend(2)/60;
     HNoReg = HNoReg(1)+(HNoReg(2)/60);
 
-    Slots(:,1) = [HStart:1/PAAR:Hend (Hend + 1/PAAR):1/AAR:HNoReg+1];    
+    Slots(:,1) = [HStart:1/PAAR:Hend (Hend + 1/AAR):1/AAR:HNoReg+1];    
     Slots(:,3) = zeros(1,length(Slots));
     
     for i = 1:length(Slots)
