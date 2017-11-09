@@ -10,7 +10,7 @@ radius = 1500;
 close all;
 
 % [SlotsRBS, DelayRBS] = RBS (Name, ETA, Hstart, Hend, slot)
-[SlotsRBS, DelayRBS] = RBS (DataA.Number, DataA.ETA, Hstart, Hend, Slot);
+[SlotsRBS, DelayDiaRBS, DelayAffectedRBS] = RBS (DataA.Number, DataA.ETA, Hstart, Hend, Slot);
 
 % [HNoReg, delay] = aggregateDemand (ETA, Hstart, Hend, PAAR, AAR);
 [HNoReg, delayGDP] = aggregateDemand (DataA.ETA, Hstart, Hend, PAAR, AAR);

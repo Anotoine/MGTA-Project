@@ -1,4 +1,4 @@
-function [Slots, Delay] = RBS (Name, ETA, Hstart, Hend, slot)
+function [Slots, DelayDia, DelayAffected] = RBS (Name, ETA, Hstart, Hend, slot)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Slots, Delay] = RBS(DataA.Number, DataA.ETA, 11, 13, 3);  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -17,12 +17,14 @@ function [Slots, Delay] = RBS (Name, ETA, Hstart, Hend, slot)
         end
     end
     
-    Delay = sum(Slots(241:1:404,4));
+    DelayAffected = sum(Slots(241:1:404,4));
+    DelayDia = sum(Slots(:,4));
     
     figure('name','Ration By Schedule')   
     title('Ration by Schedule');xlabel('Time (hours)'); ylabel('Delay (min)');
     plot(Slots(:,1)/60,Slots(:,4),'b-d')
-    text(0.05,0.95,['Total Delay = ', num2str(Delay), ' min'],'Units','normalized');
+    text(0.05,0.95,['Total Delay Day= ', num2str(DelayDia), ' min'],'Units','normalized');
+    text(0.05,0.90,['Total Delay Affected= ', num2str(DelayAffected), ' min'],'Units','normalized');
     legend('Delay (min)'); legend('boxoff'); axis([7 19 0 inf]);
 
 end
