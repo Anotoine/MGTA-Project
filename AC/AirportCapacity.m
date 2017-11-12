@@ -67,8 +67,8 @@ end
 
 % Airport Capacity, There We Go.
 
-Ca = ones(1,length(arrivalsPerSlot))*15; % 60 / 4 - 20 / 4
-Cd = ones(1,length(departuresPerSlot))*15; % 
+Ca = ones(1,length(arrivalsPerSlot))*15; % 60 / 4  % 20 / 4
+Cd = ones(1,length(departuresPerSlot))*15;
 Da = arrivalsPerSlot; 
 Dd = departuresPerSlot;
 
@@ -89,19 +89,28 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     A = [A2 zeros(length(Da),length(Dd)); zeros(length(Da),length(Dd)) A2];
     A = [A1; A];
     
+    %%%
+%     A = [A; [eye(8), eye(8)]];
+    %%%
+    
     b = [Ca, Cd];
     lenB = length(b);
     sumA = 0;
     sumD = 0;
     for i = lenB+1:lenB+length(Da)+length(Dd)
-        if(i <= 8 + lenB)
+        if(i <= length(Da) + lenB)
             sumA = sumA + Da(i-lenB);
             b(i) = sumA;
         else
-            sumD = sumD + Dd(i-lenB-8);
+            sumD = sumD + Dd(i-lenB-length(Da));
             b(i) = sumD;
         end
     end
+    
+    %%%
+%     b = [b ones(1,8)*26];
+    %%%
+    
     lb = zeros(1,length(Da)+length(Dd));
     ub = inf*ones(1,length(Da)+length(Dd));
     f = zeros(1,length(Da)+length(Dd));
@@ -115,11 +124,8 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     
     x = intlinprog(f,intcon,A,b,[],[],lb,ub);
     
-    %plotAC();
     
-    
-    
-    
-    
+    plotAC(Da,Dd,Ca(1),Cd(1),x(1:8),x(9:16));
+        
     
 end

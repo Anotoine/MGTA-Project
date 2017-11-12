@@ -10,10 +10,10 @@ function CTA = computeCTA(ETA, GroundDelay, AirDelay)
         if isempty(pos)
             pos = find(AirDelay(:,1) == i);
             if ~isempty(pos)
-                CTA(i) = ETA(i) +  AirDelay(pos,2);
+                CTA(i) = ETA(i) + AirDelay(pos,2);
             end
         elseif ~isempty(pos)
-            CTA(i) = ETA(i) +  GroundDelay(pos,2);
+            CTA(i) = ETA(i) + GroundDelay(pos,2);
         end
     end
     

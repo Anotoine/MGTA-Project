@@ -1,4 +1,6 @@
 %Test GDP --> Main
+clearvars;
+load('DataArrivals.mat')
 HFile = [9 0];
 Hstart = [11 0];
 Hend = [13 0];
@@ -32,3 +34,12 @@ CTA = computeCTA (DataA.ETA, GroundDelay, AirDelay);
 % plotHistograms (ETA, CTA, AAR, PAAR)
 plotHistograms(DataA.ETA, CTA, AAR, PAAR, SlotsGDP);
 
+%Computing the total, maximum, average delay (Airborne and Ground)
+    %-GroundDelay
+GroundMax = max(GroundDelay(:,2));
+GroundTotal = sum(GroundDelay(:,2));
+GroundAv = mean(GroundDelay(:,2));
+    %-AirDelay
+AirMax = max(AirDelay(:,2));
+AirTotal = sum(AirDelay(:,2));
+AirAv = mean(AirDelay(:,2));

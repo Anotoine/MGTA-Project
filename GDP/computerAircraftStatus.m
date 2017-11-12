@@ -47,5 +47,13 @@ function [NotAffected, ExcludedRadius, ExcludedInternational, ExcludedFlying, Ex
         
         i = i + 1;
     end
+    
+    %Checking that both are of the same length with ETA
+    if length(Excluded) < length(ETA)
+        Excluded = [Excluded zeros(1,length(ETA)-length(Excluded))];
+    end
+    if length(Controlled) < length(ETA)
+        Controlled = [Controlled zeros(1,length(ETA)-length(Controlled))];
+    end
 
 end
