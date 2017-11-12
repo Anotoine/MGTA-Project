@@ -1,4 +1,4 @@
-function plotHistograms(ETA, CTA, AAR, PAAR, Slots)
+function plotHistograms(ETA, CTA, AAR, PAAR)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % plotHistograms(ETA, CTA, 60, 30) %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

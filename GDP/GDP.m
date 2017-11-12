@@ -1,6 +1,6 @@
 %Test GDP --> Main
 clearvars;
-load('DataArrivals.mat')
+load('..\DataArrivals.mat')
 HFile = [9 0];
 Hstart = [11 0];
 Hend = [13 0];
@@ -32,14 +32,16 @@ SlotsGDP = computeSlotsGDP (Hstart, Hend, HNoReg, PAAR, AAR);
 CTA = computeCTA (DataA.ETA, GroundDelay, AirDelay);
 
 % plotHistograms (ETA, CTA, AAR, PAAR)
-plotHistograms(DataA.ETA, CTA, AAR, PAAR, SlotsGDP);
+plotHistograms(DataA.ETA, CTA, AAR, PAAR);
 
 %Computing the total, maximum, average delay (Airborne and Ground)
-    %-GroundDelay
-GroundMax = max(GroundDelay(:,2));
-GroundTotal = sum(GroundDelay(:,2));
-GroundAv = mean(GroundDelay(:,2));
-    %-AirDelay
-AirMax = max(AirDelay(:,2));
-AirTotal = sum(AirDelay(:,2));
-AirAv = mean(AirDelay(:,2));
+    %->AirDelay
+Max(1,1) = max(AirDelay(:,2));
+Total(1,1) = sum(AirDelay(:,2));
+Av(1,1) = mean(AirDelay(:,2));
+    %->GroundDelay
+Max(2,1) = max(GroundDelay(:,2));
+Total(2,1) = sum(GroundDelay(:,2));
+Av(2,1) = mean(GroundDelay(:,2));
+    % Creating a table
+TableDelay = table(Max,Av,Total,'RowNames',{'Air Delay';'Ground Delay'}); TableDelay(1:2,:)
