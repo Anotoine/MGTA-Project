@@ -1,7 +1,7 @@
 %Main GHP (Study taking into account the Connection People)
 
 clearvars;
-load('DataArrivals.mat')
+load('..\DataArrivals.mat')
 Hstart = 660;   %11 00 AM - Start of the regulation
 Hend = 780;     %01 00 PM - End of the regulation
 Hfinal = 1148;  %07 08 PM - End of the data to analise (later than the real data to have some slots, just in case)

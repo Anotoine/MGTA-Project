@@ -1,8 +1,8 @@
 clearvars
 clc
 
-load('DataArrivalsDatetime.mat')
-load('DataDeparturesDatetime.mat')
+load('..\DataArrivalsDatetime.mat')
+load('..\DataDeparturesDatetime.mat')
 
 % Parse arrivals and create vector
 arrivalsStart = posixtime(datetime(DataA.ETA(123))); %10:05 AM
