@@ -18,6 +18,7 @@ function [slots, GroundDelay, AirDelay] = assignSlots (slots, ETA, Controlled, E
                     if (ETAH <= slotH)
                         slots(j,3) = Excluded(i);
                         slots(j,4) = slotH - ETAH;
+                        slots(j,5) = 1; %the 1 means that the delay is AirDelay
                         AirDelay(end+1,1) = Excluded(i);
                         AirDelay(end,2) = slotH - ETAH;
                         encontrado = true;
@@ -41,6 +42,7 @@ function [slots, GroundDelay, AirDelay] = assignSlots (slots, ETA, Controlled, E
                     if ((ETAH <= slotH) && (slots(j,3) == 0))
                         slots(j,3) = Controlled(i);
                         slots(j,4) = slotH - ETAH;
+                        slots(j,5) = 2; %the 2 means that the delay is GroundDelay
                         GroundDelay(end+1,1) = Controlled(i);
                         GroundDelay(end,2) = slotH - ETAH;
                         encontrado = true;

@@ -14,14 +14,6 @@ close all;
 % [SlotsRBS, DelayRBS] = RBS (Name, ETA, Hstart, Hend, slot)
 [SlotsRBS, DelayDayRBS, DelayAffectedRBS] = RBS (DataA.Number, DataA.ETA, Hstart, Hend, Slot);
 
-TableSlotsRBS = table(DataA.Number,DataA.ETA,zeros(length(DataA.ETA),2),zeros(length(DataA.ETA),1),'VariableNames',{'ID','ETA','CTA','Delay'});
-j = 1;
-for i = 1:length(TableSlotsRBS{:,1})
-    pos = find(TableSlotsRBS{i,1} == SlotsRBS(:,3));
-    TableSlotsRBS(j,3) = sec2HHMM(SlotsRBS(pos,2)*60);
-    j = j + 1;
-end
-
 % [HNoReg, delay] = aggregateDemand (ETA, Hstart, Hend, PAAR, AAR);
 [HNoReg, delayGDP] = aggregateDemand (DataA.ETA, Hstart, Hend, PAAR, AAR);
 
@@ -41,6 +33,31 @@ CTA = computeCTA (DataA.ETA, GroundDelay, AirDelay);
 
 % plotHistograms (ETA, CTA, AAR, PAAR)
 plotHistograms(DataA.ETA, CTA, AAR, PAAR);
+
+%Computing the tables
+    %-> For the RBS
+TableSlotsRBS = table(DataA.Number,DataA.ETA,zeros(length(DataA.ETA),2),zeros(length(DataA.ETA),1),'VariableNames',{'ID','ETA','CTA','Delay'});
+j = 1;
+for i = 1:length(TableSlotsRBS{:,1})
+    pos = find(TableSlotsRBS{i,1} == SlotsRBS(:,3));
+    TableSlotsRBS{j,3} = sec2HHMM(SlotsRBS(pos,1)*60);
+    TableSlotsRBS{j,4} = SlotsRBS(pos,4);
+    j = j + 1;
+end
+    %-> For the GDP
+TableSlotsGDP = table(DataA.Number,DataA.ETA,zeros(length(DataA.ETA),2),'U',zeros(length(DataA.ETA),1),'VariableNames',{'ID','ETA','CTA','TypeofDelay','Delay'});
+j = 1;
+for i = 1:length(TableSlotsGDP{:,1})
+    pos = find(TableSlotsGDP{i,1} == SlotsGDP(:,3));
+    TableSlotsGDP{j,3} = [SlotsGDP(pos,1) SlotsGDP(pos,2)];
+    TableSlotsGDP{j,4} = SlotsGDP(pos,4);
+    if SlotsGDP(pos,5) == 1
+        TableSlotsGDP{} = 'A';
+    elseif SlotsGDP(pos,5) == 2
+        TableSlotsGDP{} = 'G';
+    end
+    j = j + 1;
+end
 
 %Computing the total, maximum, average delay (Airborne and Ground)
     %->AirDelay - RBS only

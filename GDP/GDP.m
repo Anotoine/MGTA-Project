@@ -45,12 +45,17 @@ for i = 1:length(TableSlotsRBS{:,1})
     j = j + 1;
 end
     %-> For the GDP
-TableSlotsGDP = table(DataA.Number,DataA.ETA,zeros(length(DataA.ETA),2),zeros(length(DataA.ETA),1),'VariableNames',{'ID','ETA','CTA','Delay'});
+TableSlotsGDP = table(DataA.Number,DataA.ETA,zeros(length(DataA.ETA),2),char('U'*ones(length(DataA.ETA),1)),zeros(length(DataA.ETA),1),'VariableNames',{'ID','ETA','CTA','TypeofDelay','Delay'});
 j = 1;
 for i = 1:length(TableSlotsGDP{:,1})
     pos = find(TableSlotsGDP{i,1} == SlotsGDP(:,3));
     TableSlotsGDP{j,3} = [SlotsGDP(pos,1) SlotsGDP(pos,2)];
-    TableSlotsGDP{j,4} = SlotsGDP(pos,4);
+    TableSlotsGDP{j,5} = SlotsGDP(pos,4);
+    if SlotsGDP(pos,5) == 1
+        TableSlotsGDP{j,4} = 'A';
+    elseif SlotsGDP(pos,5) == 2
+        TableSlotsGDP{j,4} = 'G';
+    end
     j = j + 1;
 end
 
