@@ -1,5 +1,5 @@
 clearvars; close all;
-load('DataArrivals.mat')
+load('..\DataArrivals.mat')
 
 HFile = [9 0];
 Hstart = [11 0];
@@ -54,11 +54,23 @@ while i <= length(HFilei)
 
     [~, GroundDelayF(:,:,i), AirDelayF(:,:,i)] = assignSlots (SlotsGDP, DataA.ETA, ControlledF(:,i), ExcludedF(:,i));
     
+    %->AirDelay
+    Amount(1,1,i) = length(find(AirDelayF(:,1,i) > 0));
+    Max(1,1,i) = max(AirDelayF(:,2,i));
+    Total(1,1,i) = sum(AirDelayF(:,2,i));
+    Av(1,1,i) = sum(AirDelayF(:,2,i))/Amount(1,1,i);
+    %->GroundDelay
+    Amount(2,1,i) = length(find(GroundDelayF(:,1,i) > 0));
+    Max(2,1,i) = max(GroundDelayF(:,2,i));
+    Total(2,1,i) = sum(GroundDelayF(:,2,i));
+    Av(2,1,i) = sum(GroundDelayF(:,2,i))/Amount(2,1,i);
+    
     i = i + 1;
 end
+    
 
-TotalAirDelayF(:) = sum(AirDelayF(:,2,:));
-TotalGroundDelayF(:) = sum(GroundDelayF(:,2,:));
+% TotalAirDelayF(:) = sum(AirDelayF(:,2,:));
+% TotalGroundDelayF(:) = sum(GroundDelayF(:,2,:));
 y = 1:6500;
 x = 11*ones(1,length(y));
 
