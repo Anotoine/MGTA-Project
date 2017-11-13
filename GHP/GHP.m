@@ -1,4 +1,4 @@
-function [x] = GHP(e,r,t,b,epsilon)
+function [x, Slots, Cost] = GHP(e,r,t,b,epsilon)
 %%%
 %Function about the calculus of the GHP.
 %%%
@@ -22,6 +22,7 @@ function [x] = GHP(e,r,t,b,epsilon)
     A = zeros(T/3,T);
     b = b';
     c = zeros(1,F*T);
+    cplot = zeros(1,F*T);
     ub = ones(1,F*T);
     lb = zeros(1,F*T);
     intcon = 1:(F*T);
@@ -52,8 +53,10 @@ function [x] = GHP(e,r,t,b,epsilon)
 
             if t(j)-e(i) < 0
                 c (j + T*(i-1)) = 10e10;
+                cplot(j + T*(i-1)) = 0;
             else
                 c (j + T*(i-1)) = r(i)*power((t(j)-e(i)),epsilon+1);
+                cplot(j + T*(i-1)) = r(i)*power((t(j)-e(i)),epsilon+1);
             end
             j = j + 1;
         end
@@ -61,7 +64,21 @@ function [x] = GHP(e,r,t,b,epsilon)
         j = 1;
     end
 
-     x = intlinprog(c,intcon,A,b,Aeq,beq,lb,ub);
-    
-     x = reshape(x,[T,F]);
+    x_or = intlinprog(c,intcon,A,b,Aeq,beq,lb,ub);
+
+    x = reshape(x_or,[T,F]);
+     
+    plotGHP(reshape(cplot,[T,F]));
+     
+    CTA = zeros(length(x(1,:)),1);
+    for i = 1:length(x(1,:))
+        pos = find(x(:,i) == 1);
+        CTA(i,1) = e(1)+pos-1;
+        
     end
+    
+    Slots = [e CTA CTA-e];
+    
+    Cost(:) = c(find(x(:) == 1));
+    
+end

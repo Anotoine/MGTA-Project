@@ -22,7 +22,7 @@ for i = 1:5000
     AmountR(i,1,1) = length(find(AirDelayR(:,1,i) > 0));
     MaxR(i,1,1) = max(AirDelayR(:,2,i));
     TotalR(i,1,1) = sum(AirDelayR(:,2,i));
-    AvR(i,1,1) = sum(AirDelayR(:,2,i))/494;
+    AvR(i,1,1) = sum(AirDelayR(:,2,i))/AmountR(i,1,1);
     
     %->GroundDelay
     AmountR(i,2,1) = length(find(GroundDelayR(:,1,i) > 0));

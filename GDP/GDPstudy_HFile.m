@@ -37,7 +37,7 @@ while i <= length(HFilei)
     AmountF(i,1,1) = length(find(AirDelayF(:,1,i) > 0));
     MaxF(i,1,1) = max(AirDelayF(:,2,i));
     TotalF(i,1,1) = sum(AirDelayF(:,2,i));
-    AvF(i,1,1) = sum(AirDelayF(:,2,i))/494;
+    AvF(i,1,1) = sum(AirDelayF(:,2,i))/AmountF(i,1,1);
     
     %->GroundDelay
     AmountF(i,2,1) = length(find(GroundDelayF(:,1,i) > 0));

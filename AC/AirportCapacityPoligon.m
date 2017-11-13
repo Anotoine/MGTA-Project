@@ -6,7 +6,7 @@ load('..\DataDeparturesDatetime.mat')
 
 % Parse arrivals and create vector
 arrivalsStart = posixtime(datetime(DataA.ETA(123))); %10:05 AM
-arrivalsEnd = posixtime(datetime(DataA.ETA(196))); %12:05 PM
+arrivalsEnd = posixtime(datetime(DataA.ETA(198))); %12:05 PM
 arrivalsPerSlot = [];
 
 numFlight = 123;
@@ -27,7 +27,7 @@ end
 
 % Parse departures and create vector
 departuresStart = posixtime(datetime(DataD.ETA(159))); %10:05 AM
-departuresEnd = posixtime(datetime(DataD.ETA(267))); %12:05 PM
+departuresEnd = posixtime(datetime(DataD.ETA(270))); %12:05 PM
 departuresPerSlot = [];
 
 numFlight = 159;
@@ -68,11 +68,11 @@ end
 % Airport Capacity, There We Go.
 
 Ca = ones(1,length(arrivalsPerSlot))*15; % 60 / 4  % 20 / 4
-Cd = ones(1,length(departuresPerSlot))*15;
+Cd = ones(1,length(departuresPerSlot))*10;
 Da = arrivalsPerSlot; 
 Dd = departuresPerSlot;
 
-[x] = AirportCap(Da,Dd,Ca,Cd,0.5);
+[x] = AirportCap(Da,Dd,Ca,Cd,1);
 
 function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
 
@@ -90,7 +90,7 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     A = [A1; A];
     
     %%%
-%     A = [A; [eye(8), eye(8)]];
+    A = [A; [eye(8), eye(8)]];
     %%%
     
     b = [Ca, Cd];
@@ -108,7 +108,7 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     end
     
     %%%
-%     b = [b ones(1,8)*26];
+    b = [b ones(1,8)*21];
     %%%
     
     lb = zeros(1,length(Da)+length(Dd));
@@ -125,7 +125,7 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     x = intlinprog(f,intcon,A,b,[],[],lb,ub);
     
     
-    plotAC(Da,Dd,Ca(1),Cd(1),x(1:8),x(9:16));
+    plotACPoligon(Da,Dd,Ca(1),Cd(1),x(1:8),x(9:16),alpha);
         
     
 end
