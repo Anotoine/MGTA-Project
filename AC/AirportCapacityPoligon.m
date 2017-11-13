@@ -72,7 +72,7 @@ Cd = ones(1,length(departuresPerSlot))*10;
 Da = arrivalsPerSlot; 
 Dd = departuresPerSlot;
 
-[x] = AirportCap(Da,Dd,Ca,Cd,1);
+[x] = AirportCap(Da,Dd,Ca,Cd,0.7);
 
 function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
 

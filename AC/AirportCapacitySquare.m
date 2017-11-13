@@ -72,12 +72,12 @@ Cd = ones(1,length(departuresPerSlot))*20;
 Da = arrivalsPerSlot; 
 Dd = departuresPerSlot;
 
-[x] = AirportCap(Da,Dd,Ca,Cd,1);
+[x] = AirportCap(Da,Dd,Ca,Cd,0.7);
 
 Time(:,1) = [10;10;10;10;11;11;11;11];
 Time(:,2) = [05;20;35;50;05;20;35;50];
 
-TableCapacity = table(Time(:,1),Time(:,2),x(:,1),Da',x(:,2),Dd','VariableName',{'Hour','Minute','Arrivals','Arrivals_AC','Departures','Departures_AC'}); TableCapacity(:,:)
+TableCapacity = table(Time(:,1),Time(:,2),Da',x(:,1),Dd',x(:,2),'VariableName',{'Hour','Minute','Arrivals','Arrivals_AC','Departures','Departures_AC'}); TableCapacity(:,:)
 
 function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
 
