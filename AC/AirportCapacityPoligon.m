@@ -72,7 +72,13 @@ Cd = ones(1,length(departuresPerSlot))*10;
 Da = arrivalsPerSlot; 
 Dd = departuresPerSlot;
 
-[x] = AirportCap(Da,Dd,Ca,Cd,0.7);
+[x] = AirportCap(Da,Dd,Ca,Cd,1);
+
+Time(:,1) = [10;10;10;10;11;11;11;11];
+Time(:,2) = [05;20;35;50;05;20;35;50];
+
+TableCapacityPoligon = table(Time(:,1),Time(:,2),Da',x(:,1),Dd',x(:,2),'VariableName',{'Hour','Minute','Arrivals','Arrivals_AC','Departures','Departures_AC'}); TableCapacityPoligon(:,:)
+
 
 function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
 
@@ -124,8 +130,8 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     
     x = intlinprog(f,intcon,A,b,[],[],lb,ub);
     
+    x = reshape(x,[length(Da),2]);
     
     plotACPoligon(Da,Dd,Ca(1),Cd(1),x(1:8),x(9:16),alpha);
         
-    
 end
