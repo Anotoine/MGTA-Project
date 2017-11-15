@@ -1,15 +1,14 @@
-clearvars
-clc
+clearvars; clc; %Erasing all the variables and the command window
 
-load('..\DataArrivalsDatetime.mat')
-load('..\DataDeparturesDatetime.mat')
+load('..\DataArrivalsDatetime.mat') %Loading the Data from Arrivals
+load('..\DataDeparturesDatetime.mat') %Loading the Data from Departures
 
 % Parse arrivals and create vector
-arrivalsStart = posixtime(datetime(DataA.ETA(123))); %10:05 AM
-arrivalsEnd = posixtime(datetime(DataA.ETA(198))); %12:05 PM
+arrivalsStart = posixtime(datetime(DataA.ETA(123))); %Starting time at 10:05 AM
+arrivalsEnd = posixtime(datetime(DataA.ETA(198))); %Ending time at 12:05 PM
 arrivalsPerSlot = [];
 
-numFlight = 123;
+numFlight = 123; % Aircraft at time 10:05 AM
 arrivalsThisSlot = 0;
 
 while (numFlight < length(DataA.Number) && posixtime(DataA.ETA(numFlight)) < arrivalsEnd)
@@ -26,11 +25,11 @@ while (numFlight < length(DataA.Number) && posixtime(DataA.ETA(numFlight)) < arr
 end
 
 % Parse departures and create vector
-departuresStart = posixtime(datetime(DataD.ETA(159))); %10:05 AM
-departuresEnd = posixtime(datetime(DataD.ETA(270))); %12:05 PM
+departuresStart = posixtime(datetime(DataD.ETA(159))); %Starting time at 10:05 AM
+departuresEnd = posixtime(datetime(DataD.ETA(270))); %Ending time at 12:05 PM
 departuresPerSlot = [];
 
-numFlight = 159;
+numFlight = 159; % Aircraft at time 10:05 AM
 departuresThisSlot = 0;
 
 while (numFlight < length(DataD.Number)  && posixtime(DataD.ETA(numFlight)) < departuresEnd)
@@ -66,22 +65,52 @@ elseif (length(arrivalsPerSlot) < length(departuresPerSlot))
 end
 
 % Airport Capacity, There We Go.
+departuresPerSlot = [departuresPerSlot 0 0 0]; %The zeros represent 3 slots with 0 demand (Needed to end the queue)
+arrivalsPerSlot = [arrivalsPerSlot 0 0 0];
 
-Ca = ones(1,length(arrivalsPerSlot))*15; % 60 / 4  % 20 / 4
-Cd = ones(1,length(departuresPerSlot))*10;
+Ca = ones(1,length(arrivalsPerSlot))*15; % Capacity Arrivals
+Cd = ones(1,length(departuresPerSlot))*10; %Capacity Departures
 Da = arrivalsPerSlot; 
 Dd = departuresPerSlot;
+alpha = 0.7;
 
-[x] = AirportCap(Da,Dd,Ca,Cd,1);
+[x] = AirportCap(Da,Dd,Ca,Cd,alpha);
 
-Time(:,1) = [10;10;10;10;11;11;11;11];
-Time(:,2) = [05;20;35;50;05;20;35;50];
+%The time slots   (8 with demnad     and  3 without demand)
+Time(:,1) = [10;10;10;10;11;11;11;11;   12;12;12];
+Time(:,2) = [05;20;35;50;05;20;35;50;   05;20;35];
+Time(:,3) = Time(:,1)+Time(:,2)/60;
 
-TableCapacityPoligon = table(Time(:,1),Time(:,2),Da',x(:,1),Dd',x(:,2),'VariableName',{'Hour','Minute','Arrivals','Arrivals_AC','Departures','Departures_AC'}); TableCapacityPoligon(:,:)
+%Creation of the table 
+TableCapacityPoligon = table(Time(:,1),Time(:,2),Da',x(:,1),Da'-x(:,1),Dd',x(:,2),Dd'-x(:,2),...
+    'VariableName',{'Hour','Minute','Arrivals','Arrivals_AC','Arrivals_Queue','Departures','Departures_AC','Departures_Queue'});
+
+	%Erasing the values for the queue that are less than 0
+for i = 1:length(Time(:,3))
+    Arrivals_Q(i) = max(0, min(TableCapacityPoligon{i,5}));
+    Departures_Q(i) = max(0, min(TableCapacityPoligon{i,8}));
+end
+
+%Drawing the Queue
+figure('name','Queues')
+plot(Time(:,3), Arrivals_Q, 'b-d')
+hold on;
+plot(Time(:,3), Departures_Q, 'r-o')
+title(['Queue (\alpha = ' num2str(alpha) ')']);xlabel('Time Slot');ylabel('Amount of Aircraft in the Queue');
+legend('Arrival Queue','Departures Queue')
+
+%Computing the Total
+Totalline = {0,0,sum(TableCapacityPoligon{:,3}),sum(TableCapacityPoligon{:,4}),sum(TableCapacityPoligon{:,5}),sum(TableCapacityPoligon{:,6})...
+    sum(TableCapacityPoligon{:,7}),sum(TableCapacityPoligon{:,8})};
+
+%Total to the table
+TableCapacityPoligon = [TableCapacityPoligon;Totalline];
+TableCapacityPoligon(:,:)
 
 
 function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
 
+	%Creation of the A matrix
     A1 = eye(length(Da)+length(Dd));
     
     for i = 1:length(Da) %rows
@@ -94,11 +123,9 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     
     A = [A2 zeros(length(Da),length(Dd)); zeros(length(Da),length(Dd)) A2];
     A = [A1; A];
-    
-    %%%
-    A = [A; [eye(8), eye(8)]];
-    %%%
-    
+    A = [A; [eye(length(Da)), eye(length(Dd))]];
+	
+    %Creation of the B matrix
     b = [Ca, Cd];
     lenB = length(b);
     sumA = 0;
@@ -113,15 +140,14 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
         end
     end
     
-    %%%
-    b = [b ones(1,8)*21];
-    %%%
+    b = [b ones(1,length(Da))*21]; %The line is y + x <= 21
     
     lb = zeros(1,length(Da)+length(Dd));
     ub = inf*ones(1,length(Da)+length(Dd));
     f = zeros(1,length(Da)+length(Dd));
     intcon = 1:length(Da)+length(Dd);
     
+	% Calculus of the cost function
     for i = 1:length(Da)
         f(i) = alpha*(length(Da)-i+1);
         f(i + length(Da)) = (1-alpha)*(length(Da)-i+1);
@@ -130,8 +156,10 @@ function [x] = AirportCap(Da, Dd, Ca, Cd, alpha)
     
     x = intlinprog(f,intcon,A,b,[],[],lb,ub);
     
+	%Reshaping of the solution to in two rows of the length
     x = reshape(x,[length(Da),2]);
     
+	%Representing the solution
     plotACPoligon(Da,Dd,Ca(1),Cd(1),x(1:8),x(9:16),alpha);
         
 end

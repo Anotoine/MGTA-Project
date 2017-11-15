@@ -1,14 +1,14 @@
 %Test GDP --> Main
 clearvars;
 load('..\DataArrivals.mat')
-HFile = [9 0];
+HFile = [10 0]; %0900
 Hstart = [11 0];
 Hend = [13 0];
 
 PAAR = 20;
 AAR = 60;
 Slot = 3;
-radius = 1500;
+radius = 500; %1500
 close all;
 
 % [SlotsRBS, DelayRBS] = RBS (Name, ETA, Hstart, Hend, slot)
