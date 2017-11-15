@@ -1,3 +1,5 @@
+% This function converts a time specified 
+% in seconds to the format HH:MM
 function [HM,days] = sec2HHMM (sec) 
     [c,r] = size(sec); 
     HM = zeros(c,1);

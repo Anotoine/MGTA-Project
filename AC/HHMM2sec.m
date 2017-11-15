@@ -1,3 +1,5 @@
+% This function converts a time specified 
+% in the format HH:MM to seconds
 function [sec] = HHMM2sec (HM) 
     [c,r] = size(HM); 
     sec = zeros(c,1);
