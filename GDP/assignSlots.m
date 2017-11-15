@@ -1,3 +1,5 @@
+% Assigns slots to the different flights
+% when applying a GDP regulation
 function [slots, GroundDelay, AirDelay] = assignSlots (slots, ETA, Controlled, Excluded)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [slots, GroundDelay, AirDelay] = assignSlots (Slots, DataA.ETA, Controlled, Excluded) %

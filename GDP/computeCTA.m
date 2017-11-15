@@ -1,3 +1,5 @@
+% Computes the Controlled Time of Arrival for the flights
+% affected by the GDP regulation
 function CTA = computeCTA(ETA, GroundDelay, AirDelay)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CTA = computeCTA(ETA, GroundDelay, AirDelay) %

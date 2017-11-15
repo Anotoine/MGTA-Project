@@ -1,3 +1,7 @@
+% This file parses the arrival and demand information for flights
+% at PHX airport, so that other functions can easily work with the
+% data in the most convenient format to make computations
+
 warning('off','all'); clearvars; tic;
 
 fileID = fopen('Arrivals_NoHeader.txt','r');

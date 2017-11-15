@@ -1,3 +1,4 @@
+% RBS function used when applying the GDP (which encompasses the RBS algorithm)
 function [Slots, DelayDay, DelayAffected] = RBS (Name, ETA, Hstart, Hend, slot)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [Slots, Delay] = RBS(DataA.Number, DataA.ETA, 11, 13, 3);  %

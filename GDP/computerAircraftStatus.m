@@ -1,3 +1,5 @@
+% Decides if a flight is affected, or not by the GDP
+% taking into account the different exclusion cases
 function [NotAffected, ExcludedRadius, ExcludedInternational, ExcludedFlying, Excluded, Controlled] = computerAircraftStatus (ETA, ETD, Distances, International, HFile, Hstart, HNoReg, radius)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %[NotAffected, ExcludedRadius, ExcludedInternational, ExcludedFlying, Excluded, Controlled] = computerAircraftStatus (DataA.ETA, DataA.ETD, DataA.Distance, DataA.Int, [9 0], [11 0], [15 03], 1000)%

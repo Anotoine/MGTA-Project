@@ -1,3 +1,4 @@
+% This function makes a plot of the result of applying the GHP
 function plotGHP(cr)
     figure('name','Cost')
     title('Cost Function'); xlabel('Time slot (min)'); ylabel('Cost');
